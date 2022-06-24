@@ -1,0 +1,39 @@
+﻿@page
+@model Sport_Shop.Pages.Register.UserRegisterModel
+@{
+}
+
+<div>
+    @Model.Message
+</div>
+<div class="container">
+    <form class="form-horizontal" method="post">
+        <div class="form-group">
+            <label asp-for="user.userName" class="control-label"></label>
+            <div class="col-sm-6">
+                <input asp-for="user.userName" class="form-control">
+                <span asp-validation-for="user.userName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="user.password" class="control-label col-sm-2"></label>
+            <div class="col-sm-6">
+                <input asp-for="user.password" class="form-control">
+                <span asp-validation-for="user.password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="user.ConfirmPassword" class="control-label col-sm2"></label>
+            <div class="col-sm-6">
+                <input asp-for="user.ConfirmPassword" class="form-control">
+                <span asp-validation-for="user.ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn btn-primary">Zatwierdź</button>
+                <span></span>
+            </div>
+        </div>
+    </form>
+</div>
